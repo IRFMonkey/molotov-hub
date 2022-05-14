@@ -1,0 +1,5 @@
+	mainRemotes = game.ReplicatedStorage
+meleeRemote = mainRemotes['meleeEvent']
+mouse = game.Players.LocalPlayer:GetMouse()
+punching = false
+cooldown = false
