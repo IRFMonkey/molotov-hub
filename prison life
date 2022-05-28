@@ -45,13 +45,17 @@ if game.PlaceId == 155615604 then
     end)
 
     PlayerSection:NewButton("Superpunch", "Punch fast ", function()
-        print("Clicked")
+        mainRemotes = game.ReplicatedStorage
+        meleeRemote = mainRemotes['meleeEvent']
+        mouse = game.Players.LocalPlayer:GetMouse()
+        punching = false
+        cooldown = false
     end)
 
 
     -- Cool stuff.
-    local CoolStuff = Window:NewTab("Cool Stuff")
-    local CoolStuffSection = CoolStuff:NewSection("Cool Stuff")
+    local CoolStuff = Window:NewTab("Cool Stuff/UI")
+    local CoolStuffSection = CoolStuff:NewSection("Cool Stuff/UI")
 
     CoolStuffSection:NewButton("Septex", "admin man", function()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
@@ -59,20 +63,19 @@ if game.PlaceId == 155615604 then
 
     CoolStuffSection:NewLabel("Do not use gun mod with Septex.")
 
-    -- UI Stuff
-    local UI = Window:NewTab("GUIs")
-    local UISection = Tab:NewSection("GUIs")
-
-    UISection:NewButton("Prison Destroyer"), "error 404", function()
+    CoolStuffSection:NewButton("Prison Destroyer"), "Executes v3", function()
         loadstring(game:HttpGet(("https://raw.githubusercontent.com/IRFMonkey/my-scripts/main/OBFUSCATED_PrisonDestroyer_V3.txt", true))()
     end)
 
-    UISection:NewButton("Nexus"), "Executes Nexus", function()
+    CoolStuffSection:NewButton("Nexus"), "Executes Nexus", function()
         loadstring(game:HttpGet(("https://raw.githubusercontent.com/GwnStefano/NexusHub/main/Main", true))()
     end)
 
-    UISection:NewButton("Advanced"), "Executes Advanced Prison Life GUI", function()
+    CoolStuffSection:NewButton("Advanced"), "Executes Advanced Prison Life GUI", function()
         loadstring(game:HttpGet("https://pastebin.com/raw/JS5SYqaU"))()
     end)
 
+    elesif game.PlaceId == 7924091690 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Molotov Hub - Big Paintball", "Sentinel")
 end
